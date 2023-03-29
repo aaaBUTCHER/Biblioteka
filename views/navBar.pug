@@ -3,38 +3,11 @@ html
         link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css', integrity='sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==', crossorigin='anonymous', referrerpolicy='no-referrer')
         style 
             include css/style.css
-        script(src='js/1.js')
-        
+        script(src='..//js/1.js', defer)
     body
         nav
             .navbar-logo-container
                 .navbar-logo
-                    a(href='index.html')
-                        img(src='img/logo.jpg', alt='Logo')
-                        |
-                    h1 My Website Name
+                    h1= name
             .navbar-menu-container
-                ul.navbar-menu
-                    each val, key in !{navObjFront}
-                         li #[a(href=`#${key}`) #{val}]
-                .navbar-shopping-bag
-                    a(href='#')
-                        i.fas.fa-shopping-bag
-        .book-container
-            .book
-                img(src='img/1.png', alt='Book 1')
-                h2 Book 1 Title
-            .book
-                img(src='img/1.png', alt='Book 2')
-                h2 Book 2 Title
-            .book
-                img(src='img/1.png', alt='Book 3')
-                h2 Book 3 Title
-        .email-subscription
-            .ad-text
-                h2 Log in për informacione me të rejat
-                p Merrni njoftime për librave më të rinj, lajmet tona dhe ofertat speciale direkt në postën tuaj elektronike.
-            form#email-form(method='POST', action='#')
-                label(for='email-input') Email
-                input#email-input(type='email', name='email', placeholder='Vendos email-in')
-                button#subscribe-btn(type='submit') Subscribe
+                ul.navbar-menu       

@@ -1,26 +1,13 @@
-// Get the elements
-const subscribeBtn = document.getElementById("subscribe-btn");
-const subscribeOptions = document.getElementById("subscribe-options");
-const signupBtn = document.getElementById("signup-btn");
-const signinBtn = document.getElementById("signin-btn");
+const navMenu=document.querySelector("ul.navbar-menu");
+const navBarObj=[{"/":" Home"}, {"/book-collection":"Koleksioni i librav"},{"/book-profile":"Profili i Librav"},{"/user-profile":"Profili i perdoruesit"}];
 
-// Hide the subscribe options initially
-subscribeOptions.style.display = "none";
-
-// Show the subscribe options when the user clicks the subscribe button
-subscribeBtn.addEventListener("click", function(event) {
-  event.preventDefault();
-  subscribeOptions.style.display = "block";
+navBarObj.forEach((c)=>{
+  const keys=Object.keys(c);
+  navMenu.innerHTML+=`<li> <a href=${keys}> ${c[keys]}</a></li>`
 });
 
-// Redirect to the sign up page when the user clicks the Sign Up button
-signupBtn.addEventListener("click", function(event) {
-  event.preventDefault();
-  window.location.href = "signup.html";
-});
 
-// Redirect to the sign in page when the user clicks the Sign In button
-signinBtn.addEventListener("click", function(event) {
-  event.preventDefault();
-  window.location.href = "signin.html";
-});
+function buyBook(id){
+  alert("Libra u ble "+id);
+}
+console.log("hello");

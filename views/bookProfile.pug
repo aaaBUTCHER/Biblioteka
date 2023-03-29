@@ -1,4 +1,7 @@
-extends navBar.pug
- 
- block content 
-    h2= content
+include navBar.pug
+
+block content
+    h2= title 
+    h3= author 
+    img(src= img, alt="" height="100px", width="100px")
+    button(onclick=`buyBook('${title}')`) Bleje
