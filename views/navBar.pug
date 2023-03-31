@@ -1,13 +1,19 @@
 html
     head
+        title= name
         link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css', integrity='sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==', crossorigin='anonymous', referrerpolicy='no-referrer')
-        style 
-            include css/style.css
-        script(src='..//js/1.js', defer)
+        link(rel='stylesheet', href='/css/style.css')
     body
         nav
             .navbar-logo-container
                 .navbar-logo
                     h1= name
             .navbar-menu-container
-                ul.navbar-menu       
+                ul.navbar-menu
+                - const navBarObjs=[{"/":" Home"}, {"/book-collection":"Koleksioni i librav"},{"/book-profile":"Profili i Librav"},{"/user-profile":"Profili i perdoruesit"}]
+                    each navBarObj in navBarObjs
+                        - for (const navKey in navBarObj)
+                            li
+                                a(href=(navKey)) #{navBarObj[navKey]}
+
+
