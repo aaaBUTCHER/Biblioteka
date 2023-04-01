@@ -1,0 +1,18 @@
+include ../includes/navBar.pug
+
+block content
+   section#libri
+            .container
+                .row
+                    .col-5.aligh-right
+                        - const width=300
+                        img(src=libri.img, width=(width),height=(width*1.6))
+                    .col-7.justify-content-right
+                        h1= libri.titulli
+                        p Autori: #[span= libri.autori]
+                        p Zhanri: #[span Zhanri i librit]
+                        p Pershkrimi: #[span Pershkrimi i librit]
+                        p ISBN: #[span ISBN i librit]
+                        p Viti i botimit #[span Viti i botimit te librit]
+                        button.btn.btn-primary.m-1 Buy
+                        button.btn.btn-warning.m-1 PreeView
