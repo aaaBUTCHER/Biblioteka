@@ -30,7 +30,7 @@ html
                                 h6
                                     small  Të Tjerë
                         li.list-group-item.active
-                            a(href='?zhanri=')
+                            a(href='?zhanri=clear')
                                 h6
                                     small  Te Gjitha
             .col-xl-10.col-sm-12.col-md-10.text-center
@@ -42,4 +42,5 @@ html
                                 img(src=liber.img, alt='Titulli i Librit', width=(width+"px"), height=((width*1.6)+"px"))
                                 h3= liber.titulli
                                 p= liber.autori
+                                p= liber.zhanri
                                 button(type="button").btn.btn-warning Blej
