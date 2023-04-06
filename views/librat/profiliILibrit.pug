@@ -1,7 +1,16 @@
-include ../includes/navBar.pug
-
-block content
-   section#libri
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title= titulliIfaqes
+    style. 
+        a{
+            color: black !important;
+            text-decoration: none !important;
+        }
+  body
+    section#libri
             .container
                 .row
                     .col-5.aligh-right
@@ -14,5 +23,5 @@ block content
                         p Pershkrimi: #[span Pershkrimi i librit]
                         p ISBN: #[span ISBN i librit]
                         p Viti i botimit #[span Viti i botimit te librit]
-                        button.btn.btn-primary.m-1 Buy
+                        a.btn.btn-primary.m-1(href="/book-collection/"+libri.id) Buy
                         button.btn.btn-warning.m-1 PreeView

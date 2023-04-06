@@ -39,8 +39,8 @@ html
                         - const width=200
                         each liber in librat
                             .col-xl-4.col-md-6.p-3
-                                img(src=liber.img, alt='Titulli i Librit', width=(width+"px"), height=((width*1.6)+"px"))
+                                a(href="/book-profile/"+liber.id)
+                                    img(src=liber.img, alt='Titulli i Librit', width=(width+"px"), height=((width*1.6)+"px"))
                                 h3= liber.titulli
                                 p= liber.autori
                                 p= liber.zhanri
-                                button(type="button").btn.btn-warning Blej

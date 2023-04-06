@@ -1,7 +1,6 @@
 const express=require("express");
 const router=express.Router();
+const bookController=require("../controllers/bookprofile");
 
-router.get("/",(req, res)=>{
-    res.render("includes/navBar");
-});
+router.get("/",bookController.getAllBooks);
 module.exports=router;

@@ -1,10 +1,10 @@
 const dbBookProfile={titulli:"Beni ecen vetem", autori:"Fan Noli", img:"/img/img1.jpg"};
-const dbBooks=[ {titulli:"Beni ecen nuk vetem", autori:"Fan Noli", img:"/img/img1.jpg", zhanri:"femij"}, 
-                {titulli:"Beni nashta ecen  vetem", autori:"Fan Noli", img:"/img/img1.jpg", zhanri:"femij"},
-                {titulli:"Beni munde te ecen vetem", autori:"Fan Noli", img:"/img/img1.jpg", zhanri:"komedi"},
-                {titulli:"Beni nuk ecen vetem", autori:"Fan Noli", img:"/img/img1.jpg", zhanri:"shkence"},
-                {titulli:"Beni nuk eshte fukara", autori:"Fan Noli", img:"/img/img1.jpg", zhanri:"romantik"},
-                {titulli:"Beni ecen vetem", autori:"Fan Noli", img:"/img/img1.jpg", zhanri:"romantik"},
+const dbBooks=[ {id:1, titulli:"Beni ecen nuk vetem", autori:"Fan Noli", img:"/img/img1.jpg", zhanri:"femij"}, 
+                {id:2, titulli:"Beni nashta ecen  vetem", autori:"Fan Noli", img:"/img/img1.jpg", zhanri:"femij"},
+                {id:3, titulli:"Beni munde te ecen vetem", autori:"Fan Noli", img:"/img/img1.jpg", zhanri:"komedi"},
+                {id:4, titulli:"Beni nuk ecen vetem", autori:"Fan Noli", img:"/img/img1.jpg", zhanri:"shkence"},
+                {id:5, titulli:"Beni nuk eshte fukara", autori:"Fan Noli", img:"/img/img1.jpg", zhanri:"romantik"},
+                {id:6, titulli:"Beni ecen vetem", autori:"Fan Noli", img:"/img/img1.jpg", zhanri:"romantik"},
             ];
 
 exports.getBookProfile=(req, res)=>{
@@ -25,3 +25,4 @@ exports.getAllBooks=(req, res)=>{
     res.render("librat/index",{titulliIfaqes:"Te gjitha librat", librat: dbBooks})
 }
 
+//module.exports=dbBooks;

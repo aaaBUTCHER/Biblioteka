@@ -8,3 +8,7 @@ function activate(element){
             alink.addClass("active");
     }
 }
+
+function buy(id){
+    console.log(id);
+}

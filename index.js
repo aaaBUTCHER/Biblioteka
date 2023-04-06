@@ -4,6 +4,8 @@ const bookCollection=require("./routes/bookCollection");
 const bookProfile=require("./routes/bookProfile");
 const homepage=require("./routes/homepage");
 const userProfile=require("./routes/userProfile");
+const logIn=require("./routes/login");
+const register=require("./routes/register")
 
 //Expressi the connfigat e tij
 const express=require("express");
@@ -16,8 +18,10 @@ app.use("/", homepage);
 app.use("/book-collection", bookCollection);
 app.use("/book-profile", bookProfile);
 app.use("/user-profile", userProfile);
+app.use("/log-in", logIn);
+app.use('/register', register);
 app.use((req, res,next)=>{
-    res.status(404).send("error file not found");
+    res.status(404).render("err404");
 })
 app.listen(3000,()=>console.log("Po nijn ne porten 3000"));
 
