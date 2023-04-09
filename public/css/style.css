@@ -6,3 +6,9 @@
 .r{
     margin: 9px !important;
 }
+
+.trrrrr{
+    display: flex !important;
+    overflow-x: scroll !important;
+    background-color: red;
+}
