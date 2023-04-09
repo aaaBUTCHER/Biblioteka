@@ -40,3 +40,8 @@
 .err{
     font-size: 100pt !important;
 }
+
+li.list-group-item>a{
+    color: black !important;
+    text-decoration: none;
+}
