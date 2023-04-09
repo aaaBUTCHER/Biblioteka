@@ -1,46 +1,42 @@
 html
-  head
-    meta(charset='UTF-8')
-    meta(http-equiv='X-UA-Compatible' content='IE=edge')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    title= titulliIfaqes
-    style. 
-        a{
-            color: black !important;
-            text-decoration: none !important;
-        }
-  body
-    include ../includes/navBar.pug
-    section
-      .container-100
-        .row
-            .col-xl-1.col-sm-12.justify-content-center.align-items-center.p-3.m-3
-                h2 Filtro
-                    ul.list-group 
-                        li.list-group-item
-                            a(href='?zhanri=romantik') 
-                                h6
-                                    small Romantik
-                        li.list-group-item
-                            a(href='?zhanri=femij') 
-                                h6
-                                    small Për Fëmijë
-                        li.list-group-item
-                            a(href='?zhanri=tjere')
-                                h6
-                                    small  Të Tjerë
-                        li.list-group-item.active
-                            a(href='?zhanri=clear')
-                                h6
-                                    small  Te Gjitha
-            .col-xl-10.col-sm-12.col-md-10.text-center
-                .container-fluid.p-3
-                    .row
-                        - const width=200
-                        each liber in librat
-                            .col-xl-4.col-md-6.p-3
-                                a(href="/book-profile/"+liber.id)
-                                    img(src=liber.img, alt='Titulli i Librit', width=(width+"px"), height=((width*1.6)+"px"))
-                                h3= liber.titulli
-                                p= liber.autori
-                                p= liber.zhanri
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title= titulliIfaqes
+        ink(rel='stylesheet', href='css/style.css')
+    body
+        include ../includes/navBar.pug
+        section#hh
+            .container-100
+                .row.sss
+                    .col-xl-2.col-sm-2.justify-content-center.align-items-center.p-3.m-3
+                        h2 Filtro
+                            ul.list-group 
+                                li.list-group-item
+                                    a(href='?zhanri=romantik') 
+                                        h6
+                                            small Romantik
+                                li.list-group-item
+                                    a(href='?zhanri=femij') 
+                                        h6
+                                            small Për Fëmijë
+                                li.list-group-item
+                                    a(href='?zhanri=tjere')
+                                        h6
+                                            small  Të Tjerë
+                                li.list-group-item.active
+                                    a(href='?zhanri=clear')
+                                        h6
+                                            small  Te Gjitha
+                    .col-xl-9.col-sm-10.col-md-10.text-center
+                        .container-fluid.p-3
+                            .row
+                                - const width=200
+                                each liber in librat
+                                    .col-xl-4.col-md-6.p-3
+                                        a(href="/book-profile/"+liber.id)
+                                            img(src=liber.img, alt='Titulli i Librit', width=(width+"px"), height=((width*1.6)+"px"))
+                                        h3= liber.titulli
+                                        p= liber.autori
+                                        p= liber.zhanri

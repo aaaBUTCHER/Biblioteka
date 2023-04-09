@@ -6,6 +6,13 @@
     font-family: 'Cinzel', serif;
     font-family: 'Open Sans', sans-serif;
 }
+
+#headerii{
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
 .nav-link {
     font-size: 14pt !important;
     position: relative;
