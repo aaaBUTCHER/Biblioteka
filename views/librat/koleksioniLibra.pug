@@ -1,36 +1,25 @@
-html
-  head
-    meta(charset='UTF-8')
-    meta(http-equiv='X-UA-Compatible' content='IE=edge')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    title= titulliIfaqes
-    style. 
-        a{
-            color: black !important;
-            text-decoration: none !important;
-        }
-  body
-    include ../includes/navBar.pug
-    section
-    .container-100
-        .row
-            .col-xl-6.col-sm-12.justify-content-center.align-items-center.p-3.m-3
-                table.table 
-                    thead.thead-dark
-                        tr
-                            th Id
-                            th Titulli 
-                            th Autori 
-                            th Zhanrri
-                    tbody
-                        each liber in librat
-                            tr 
-                                td= `${id}`
-                                td= liber.titulli 
-                                td= liber.autori 
-                                td= liber.zhanri
-                                td 
-                                    button.btn.btn-secondary Lexo
-                                td 
-                                    button.btn.btn-danger Shlyj
+include ../includes/navBar.pug
+    block content
+        section
+            .container-100
+                .row.m-0.d-flex.justify-content-center
+                    .col-xl-6.col-sm-12.justify-content-center.align-items-center.p-3.m-3
+                        table.table 
+                            thead.thead-dark
+                                tr
+                                    th Id
+                                    th Titulli 
+                                    th Autori 
+                                    th Zhanrri
+                            tbody
+                                each liber in librat
+                                    tr 
+                                        td= liber.id
+                                        td= liber.titulli 
+                                        td= liber.autori 
+                                        td= liber.zhanri
+                                        td 
+                                            button.btn.btn-secondary Lexo
+                                        td 
+                                            button.btn.btn-danger Shlyj
 
