@@ -1,0 +1,13 @@
+include ../includes/navBar.pug
+block content
+    - const adminat=[        {foto: '/img/rr.jpg', emri: 'Filan', mbiemri: 'Fisteku', bio: 'fhfhfhhfhfhfhfhfhfhffhfhfhfhfhhfhfhfhfh'},                 {foto: '/img/rr.jpg', emri: 'Filan', mbiemri: 'Fisteku', bio: 'fhfhfhhfhfhfhfhfhfhffhfhfhfhfhhfhfhfhfh'},                {foto: '/img/rr.jpg', emri: 'Filan', mbiemri: 'Fisteku', bio: '...............................'},                {foto: '/img/rr.jpg', emri: 'Filan', mbiemri: 'Fisteku', bio: '...............................'},                {foto: '/img/rr.jpg', emri: 'Filan', mbiemri: 'Fisteku', bio: 'fhfhfhhfhfhfhfhfhfhffhfhfhfhfhhfhfhfhfh'}    ]
+    .container
+        h3.text-center.mb-4 Our team
+        .row.d-flex.flex-nowrap.justify-content-center.align-items-center.mt-5.overflow-auto
+            each admin in adminat
+                .col-md-4.mt-4
+                    .card
+                        img.card-img-top(src=admin.foto, alt='Photo')
+                        .card-body
+                            h5.card-title= admin.emri + ' ' + admin.mbiemri
+                            p.card-text= admin.bio

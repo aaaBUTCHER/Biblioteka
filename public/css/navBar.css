@@ -59,3 +59,12 @@ li.list-group-item > a {
     white-space: nowrap !important;
     background-color: #fafafa !important;
 }
+
+.container {
+    overflow-x: auto;
+  }
+
+  .card {
+    white-space: normal;
+  min-width: 200px;
+}

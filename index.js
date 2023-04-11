@@ -6,6 +6,7 @@ const homepage=require("./routes/homepage");
 const userProfile=require("./routes/userProfile");
 const logIn=require("./routes/login");
 const register=require("./routes/register")
+const about=require("./routes/about")
 
 //Expressi the connfigat e tij
 const express=require("express");
@@ -20,6 +21,7 @@ app.use("/book-profile", bookProfile);
 app.use("/user-profile", userProfile);
 app.use("/log-in", logIn);
 app.use('/register', register);
+app.use('/about', about);
 app.use((req, res,next)=>{
     res.status(404).render("err404");
 })
