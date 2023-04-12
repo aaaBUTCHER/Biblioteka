@@ -1,0 +1,48 @@
+include ../includes/navBar.pug
+    block content
+        section
+            //array me Libra - test me pa qysh po doketn 
+            - const aaa1=[ {id:1, titulli:"Beni ecen nuk vetem", autori:"Fan Noli", img:"/img/img1.jpg", zhanri:"femij"}, {id:2, titulli:"Beni nashta ecen  vetem", autori:"Fan Noli", img:"/img/img1.jpg", zhanri:"femij"},{id:3, titulli:"Beni munde te ecen vetem", autori:"Fan Noli", img:"/img/img1.jpg", zhanri:"komedi"},{id:4, titulli:"Beni nuk ecen vetem", autori:"Fan Noli", img:"/img/img1.jpg", zhanri:"shkence"},{id:5, titulli:"Beni nuk eshte fukara", autori:"Fan Noli", img:"/img/img1.jpg", zhanri:"romantik"},{id:6, titulli:"Beni ecen vetem", autori:"Fan Noli", img:"/img/img1.jpg", zhanri:"romantik"} ];
+            .container-100
+                .row.m-0
+                    .col-xl-2.col-sm-12.bg-dark.text-white
+                        ul.list-unstyled
+                            li
+                                a.text-decoration-none.text-white(href='#')
+                                    h6 Librat
+                            li
+                                a.text-decoration-none.text-white(href='#')
+                                    h6 Userat Qe Kan Ble Libra
+                            li
+                                a.text-decoration-none.text-white(href='#')
+                                    h6 Messazhe
+                            li  
+                                a.text-decoration-none.text-white(href='#')
+                                    h6 Komentet
+                    .col-xl-10.col-sm-12.col-md-11.text-center
+                        .container-100
+                            .row.m-0.d-flex.justify-content-center
+                                .col-xl-6.col-sm-12.justify-content-center.align-items-center.p-3.m-3
+                                    table.table 
+                                        thead.thead-dark
+                                            tr
+                                                th Id 
+                                                th ISBN
+                                                th Titulli 
+                                                th Autori 
+                                                th Zhanrri
+                                                th Pershkrimi 
+                                                th
+                                        tbody
+                                            each liber in aaa1
+                                                tr 
+                                                    td= liber.id
+                                                    td= liber.isbn 
+                                                    td= liber.titulli 
+                                                    td= liber.autori 
+                                                    td= liber.zhanri
+                                                    
+                                                    td 
+                                                        button.btn.btn-secondary Lexo
+                                                    td 
+                                                        button.btn.btn-danger Shlyj
