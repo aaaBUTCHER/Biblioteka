@@ -41,7 +41,7 @@
     font-size: 100pt !important;
 }
 
-li.list-group-item > a {
+li.list-group-item>a {
     color: black !important;
     text-decoration: none;
 }
@@ -60,6 +60,14 @@ li.list-group-item > a {
     background-color: #fafafa !important;
 }
 
+.container {
+    overflow-x: auto;
+}
+
+.card {
+    white-space: normal;
+    min-width: 200px;
+}
 form input{
     margin-right: 10px !important;
 }
