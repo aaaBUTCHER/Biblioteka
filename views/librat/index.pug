@@ -1,4 +1,6 @@
 include ../includes/navBar.pug
+    block head 
+        script(src="/js/main.js")
     block content
         section
             .container-100
@@ -6,19 +8,19 @@ include ../includes/navBar.pug
                     .col-xl-1.col-sm-12
                         h2 Filtro
                             ul.list-group 
-                                li.list-group-item
+                                li.list-group-item(class=(active==="romantik" ? "active":""))
                                     a(href='?zhanri=romantik') 
                                         h6
                                             small Romantik
-                                li.list-group-item
+                                li.list-group-item(class=(active==="femij" ? "active":""))
                                     a(href='?zhanri=femij') 
                                         h6
                                             small Për Fëmijë
-                                li.list-group-item
+                                li.list-group-item(class=(active==="tjere" ? "active":""))
                                     a(href='?zhanri=tjere')
                                         h6
                                             small  Të Tjerë
-                                li.list-group-item.active
+                                li.list-group-item(class=(active==="clear" ? "active":""))
                                     a(href='?zhanri=clear')
                                         h6
                                             small  Te Gjitha

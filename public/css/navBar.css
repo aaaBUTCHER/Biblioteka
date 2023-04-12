@@ -59,3 +59,7 @@ li.list-group-item > a {
     white-space: nowrap !important;
     background-color: #fafafa !important;
 }
+
+form input{
+    margin-right: 10px !important;
+}
