@@ -4,7 +4,7 @@ include ../includes/navBar.pug
     block content
         section
             .container-100
-                .row.m-0
+                .row.m-0.pb-5.mb-5
                     .col-xl-1.col-sm-12
                         h2 Filtro
                             ul.list-group 
@@ -34,3 +34,4 @@ include ../includes/navBar.pug
                                             img(src=liber.img, alt='Titulli i Librit', width=(width+"px"), height=((width*1.6)+"px"))
                                         h3= liber.titulli
                                         p= liber.autori
+    include ../includes/footer.pug
