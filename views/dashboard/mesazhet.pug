@@ -1,0 +1,22 @@
+block content
+    .container-100
+        .row.m-0.d-flex.justify-content-center
+            .col-xl-10.col-sm-12.justify-content-center.align-items-center.p-3.m-3
+                table.table.text-center
+                    thead.thead-dark
+                        tr
+                            th User
+                            th Email
+                            th Subject
+                            th Message
+                    tbody
+                        each liber in aaa1
+                            tr 
+                                td (Emri&Mbiemri)
+                                td (user.email)
+                                td Subject-user
+                                td(style="max-width:180px !important;").text-start= liber.pershkrimi
+                                td 
+                                    button.btn.btn-secondary Reply
+                                td 
+                                    button.btn.btn-danger Delete
